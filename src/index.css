@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: #141414;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #f4740a;
+  color: #fff;
+}
+
+.font-serif-logo {
+  font-family: var(--font-serif);
+}
+
+/* gentle floating of the hero jacket */
+@keyframes jm-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.jm-float {
+  animation: jm-float 5s ease-in-out infinite;
+}
+@keyframes jm-shadow {
+  0%,
+  100% {
+    transform: scaleX(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scaleX(0.86);
+    opacity: 0.3;
+  }
+}
+.jm-shadow {
+  animation: jm-shadow 5s ease-in-out infinite;
+}
+
+/* infinite marquee */
+@keyframes jm-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.jm-marquee {
+  animation: jm-marquee 26s linear infinite;
+}

@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+.sudo_as_admin_successful
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local system files
+.local/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# QA screenshots (not used in build)
+qa-*.png
+
+# Uploads (extracted gif frames, not used in build)
+uploads/
+
+# Scripts (debug/screenshot helpers, not part of build)
+scripts/
