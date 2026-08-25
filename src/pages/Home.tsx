@@ -79,14 +79,14 @@ export default function Home() {
           <BgLayers index={index} />
           <div className="relative z-10 flex min-h-svh flex-col px-6 pb-8 pt-6">
             <header className="flex items-center justify-between">
-              <a href="#home" className="flex items-center gap-2">
+              <Link to="/" className="flex items-center gap-2">
                 <span className="flex h-[22px] w-[22px] items-center justify-center rounded-[3px] bg-white text-[8px] font-semibold tracking-wide text-[#202020]">
                   WI
                 </span>
                 <span className="font-serif-logo text-[15px] font-semibold tracking-[0.04em] text-white">
                   WearIt
                 </span>
-              </a>
+              </Link>
               <div className="flex items-center gap-4 text-white/85">
                 <button aria-label="Cart" onClick={() => setCartOpen(true)}>
                   <CartIcon className="h-[18px] w-[18px]" />
@@ -98,27 +98,58 @@ export default function Home() {
             </header>
 
             <nav className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-[22px] bg-black/25 px-4 py-3">
-              <a
-                href="#collection"
+              <Link
+                to="/products"
                 className="rounded-full bg-white px-4 py-1.5 text-[10px] font-medium uppercase tracking-[0.12em] text-[#202020]"
               >
                 Products
-              </a>
+              </Link>
               {[
-                ["About Us", "#about"],
-                ["Contact", "#contact"],
-              ].map(([l, href]) => (
-                <a
+                ["About Us", "/about"],
+                ["Contact", "/contact"],
+              ].map(([l, to]) => (
+                <Link
                   key={l}
-                  href={href}
+                  to={to}
                   className="text-[10px] font-medium uppercase tracking-[0.12em] text-white/85"
                 >
                   {l}
-                </a>
+                </Link>
               ))}
             </nav>
 
-            <div className="mt-8 flex items-center gap-2">
+            <h1 className="mt-6 text-[34px] font-medium leading-[40px] text-white">
+              Stand out
+              <br />
+              Without trying
+            </h1>
+            <p className="mt-4 text-[12.5px] leading-[19px] text-white/70">
+              It&apos;s not just about staying warm. It&apos;s about stepping
+              outside and instantly feeling confident, comfortable, and
+              completely yourself. Designed to elevate even the simplest
+              outfit, this jacket wraps you in lightweight warmth.
+            </p>
+            <div className="mt-6">
+              <Link
+                to={`/product/${SLIDES[index].id}`}
+                className="group inline-flex h-9 items-center gap-2 rounded-full bg-white pl-5 pr-4 text-[12px] font-semibold text-[#1c1c1c]"
+              >
+                Get the look
+                <ChevronRightIcon className="h-3 w-3 transition-transform group-hover:translate-x-[2px]" />
+              </Link>
+            </div>
+
+            <div className="relative mx-auto mt-8">
+              <div className="jm-float">
+                <img
+                  src={SLIDES[index].img}
+                  alt={SLIDES[index].name}
+                  className="mx-auto h-[260px] w-auto"
+                />
+              </div>
+              <div className="jm-shadow mx-auto mt-2 h-4 w-40 rounded-full bg-black/50 blur-xl" />
+            </div>
+            <div className="mt-4 flex items-center justify-center gap-3">
               <button
                 aria-label="Previous jacket"
                 onClick={prev}
@@ -133,35 +164,6 @@ export default function Home() {
               >
                 <ChevronRightIcon className="h-3.5 w-3.5" />
               </button>
-            </div>
-
-            <h1 className="mt-4 text-[34px] font-medium leading-[40px] text-white">
-              Stand out
-              <br />
-              Without trying
-            </h1>
-            <p className="mt-4 text-[12.5px] leading-[19px] text-white/70">
-              It&apos;s not just about staying warm. It&apos;s about stepping
-              outside and instantly feeling confident, comfortable, and
-              completely yourself. Designed to elevate even the simplest
-              outfit, this jacket wraps you in lightweight warmth.
-            </p>
-            <div className="mt-6">
-              <button className="inline-flex h-9 items-center gap-2 rounded-full bg-white pl-5 pr-4 text-[12px] font-semibold text-[#1c1c1c]">
-                Get the look
-                <ChevronRightIcon className="h-3 w-3" />
-              </button>
-            </div>
-
-            <div className="relative mx-auto mt-8">
-              <div className="jm-float">
-                <img
-                  src={SLIDES[index].img}
-                  alt={SLIDES[index].name}
-                  className="mx-auto h-[260px] w-auto"
-                />
-              </div>
-              <div className="jm-shadow mx-auto mt-2 h-4 w-40 rounded-full bg-black/50 blur-xl" />
             </div>
             <div className="mt-5 text-center text-[15px] leading-[23px] text-white/90">
               Confidence,

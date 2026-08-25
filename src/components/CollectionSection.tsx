@@ -14,7 +14,7 @@ const fadeUp = {
 export default function CollectionSection() {
   const jackets = PRODUCTS.filter((p) => p.kind === "jacket");
   return (
-    <section id="collection" className="bg-[#141414] py-24 md:py-28">
+    <section id="collection" className="bg-[#141414] py-16 md:py-20">
       <div className="mx-auto w-full max-w-[1240px] px-6">
         <motion.div
           custom={0}
@@ -40,7 +40,7 @@ export default function CollectionSection() {
           </p>
         </motion.div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {jackets.map((p, i) => (
             <motion.div
               key={p.id}

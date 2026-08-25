@@ -36,7 +36,7 @@ export default function StickyNav() {
           WearIt
         </span>
       </Link>
-      <nav className="hidden items-center gap-6 md:flex">
+      <nav className="flex items-center gap-4 sm:gap-6">
         {LINKS.map((l) => (
           <NavLink
             key={l.to}

@@ -42,12 +42,14 @@ export default function ShopTheLookSection() {
           <div className="mt-10 flex items-center gap-[10px]">
             <button
               aria-label="Previous look"
+              onClick={() => setActive((a) => (a - 1 + PRODUCTS.length) % PRODUCTS.length)}
               className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white/10 text-white transition-all duration-200 hover:bg-white/25 active:scale-90"
             >
               <ChevronLeftIcon className="h-[14px] w-[14px]" />
             </button>
             <button
               aria-label="Next look"
+              onClick={() => setActive((a) => (a + 1) % PRODUCTS.length)}
               className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white/10 text-white transition-all duration-200 hover:bg-white/25 active:scale-90"
             >
               <ChevronRightIcon className="h-[14px] w-[14px]" />

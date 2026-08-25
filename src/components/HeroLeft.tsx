@@ -31,17 +31,12 @@ export default function HeroLeft() {
         variants={fadeUp}
         initial="hidden"
         animate="show"
-        className="mt-[26px] w-[432px] text-[14px] leading-[19px] text-white/70"
+        className="mt-[26px] w-full text-[14px] leading-[19px] text-white/70"
       >
         It&apos;s not just about staying warm. It&apos;s about stepping
-        <br />
         outside and instantly feeling confident, comfortable, and
-        <br />
-        completely yourself. Designed to elevate even the
-        <br />
-        simplest outfit, this jacket wraps you in lightweight
-        <br />
-        warmth.
+        completely yourself. Designed to elevate even the simplest
+        outfit, this jacket wraps you in lightweight warmth.
       </motion.p>
 
       <motion.div custom={2} variants={fadeUp} initial="hidden" animate="show" className="mt-[48px]">

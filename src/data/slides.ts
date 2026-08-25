@@ -40,7 +40,7 @@ export const SLIDES: Slide[] = [
     tag: "New Arrival",
     img: white,
     bgClass:
-      "bg-[image:radial-gradient(120%_95%_at_50%_42%,#aeb2b5_0%,#989c9f_52%,#83878a_100%)]",
+      "bg-gray-400",
   },
   {
     id: "red",
